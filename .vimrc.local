@@ -1,0 +1,51 @@
+"Vim configuration using spf13:
+"https://github.com/spf13/spf13-vim
+"To install:
+"   curl http://j.mp/spf13-vim3 -L -o - | sh
+"Put this file in your home directory as .vimrc.local
+
+"Solarized settings
+syntax enable
+colorscheme solarized
+set background=dark
+let g:solarized_termcolors=0
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+
+"Change from absolute to relative numbering depending on mode
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set rnu
+
+"Can't stand having my mouse sending me into visual mode
+set mouse="
+
+"Space toggle numbers for copying out of terminal
+noremap <silent> <Space> :set number!<CR>
+
+"Set encoding
+set encoding=utf-8
+
+"Set textwrap
+set wrap
+set tw=80
+set fo+=t
+set wm=0
+set linebreak
+set nofoldenable
+set nocursorline
+
+"Some useful bindings
+noremap <silent> <F11> :set wrap!<CR>
+noremap <silent> <F10> :set list!<CR>
+noremap <silent> <F9> :IndentGuidesToggle<CR>
+
+"Show when I should be wrapping
+set cc=+1
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+"Special wrapping for git commit messages
+au FileType gitcommit set tw=72
+
+"powerline
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:Powerline_symbols = 'fancy'
