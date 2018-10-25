@@ -1,14 +1,3 @@
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="mjg"
-
-# Example aliases
-alias rezsh="source ~/.zshrc"
-alias zshconfig="vi ~/.zshrc"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
 # Comment this out to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
